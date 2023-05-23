@@ -1,22 +1,14 @@
-import Banner from "../components/banner"
 import Header from "../components/header"
-import { posts } from "../dataFake"
+import {MainPage,ContainerAbout, Container} from "./MainPage"
 
 const HomePage=()=>{
-    return `<div class="container max-w-4xl mx-auto px-4">
-                ${Header()}
-                ${Banner()}
-                <div>
-                    <h1 class="font-bold " >Bai viet</h1>
-                    <div class="grid grid-cols-3 gap-8">
-                        ${posts.map(function map(post){
-                            return `<div>
-                                <h2>${post.title}</h2>
-                                <p>${post.content}</p>
-                            </div>`
-                        }).join("")}
-                    </div>
-                </div>
-            </div>`
-}
-export default HomePage 
+    return (/*html*/`
+        ${Header}
+        ${MainPage}
+        ${ContainerAbout}
+        ${Container}
+        <div class="theme-btn">
+        <i class="fas fa-adjust"></i>  
+    </div>`
+    )}
+export { HomePage} 
