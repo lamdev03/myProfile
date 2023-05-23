@@ -3,11 +3,11 @@ import {MainPage,ContainerAbout, Container, ContainerBlog} from "./MainPage"
 
 const HomePage = () => {
     return /*html*/`
-        ${Header};
-        ${MainPage};
-        ${ContainerAbout};
-        ${Container};
-        ${ContainerBlog};
+        ${Header()}
+        ${MainPage()}
+        ${ContainerAbout()}
+        ${Container()}
+        ${ContainerBlog()}
         `
     }
-export { HomePage} 
+export default HomePage 

@@ -345,7 +345,7 @@ const ContainerBlog=()=>{
     `
 };
 const MainPage = () => {
-  return /*html*/`(
+return /*html*/`
     <main>
     <section class="container contact" id="contact">
         <div class="contact-container">
@@ -447,8 +447,7 @@ const MainPage = () => {
         </div>
     </section>
 </main>
-    
-  );`
+    `
 };
 
 export { MainPage,ContainerAbout,Container,ContainerBlog }

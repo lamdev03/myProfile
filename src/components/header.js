@@ -1,5 +1,5 @@
 
-const Header = () => {
+const Header =() => {
     return /*html*/`
     <header class="container header active" id="home">
     <div class="header-content">
@@ -22,6 +22,6 @@ const Header = () => {
           </div>
       </div>
 </header>
-    `;
-};
+    `
+}
 export default Header;
