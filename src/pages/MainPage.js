@@ -1,8 +1,8 @@
 
 
-const ContainerAbout=()=>{
+const ContainerAbout= () => {
     return(
-        `
+        /*html*/`
         <section class="container about" id="about">
         <div class="main-title">
             <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
@@ -19,12 +19,6 @@ const ContainerAbout=()=>{
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                     Harum non necessitatibus deleniti eum soluta.
                 </p>
-                <div class="btn-con">
-                    <a href="#" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
             </div>
             <div class="right-about">
                 <div class="about-item">
@@ -112,77 +106,13 @@ const ContainerAbout=()=>{
                 </div>
             </div>
         </div>
-        <h4 class="stat-title">My Timeline</h4>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2010 - present</p>
-                <h5>Web Developer<span> - Vircrosoft</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2008 - 2011</p>
-                <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2016 - 2017</p>
-                <h5>C++ Programmer<span> - Slime Tech</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2009 - 2013</p>
-                <h5>Business Degree<span> - Sussex University</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2013 - 2016</p>
-                <h5>Computer Science Degree<span> - Brookes University</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <p class="tl-duration">2017 - present</p>
-                <h5>3d Animation<span> - Brighton University</span></h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                </p>
-            </div>
-        </div>
     </section>
         `
     )
-}
-
-const Container=()=>{
+};
+const Container = () => {
     return(
-        `
+        /*html*/`
         <section class="container" id="portfolio">
         <div class="main-title">
             <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
@@ -198,13 +128,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -217,13 +147,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -236,13 +166,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -255,13 +185,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -274,13 +204,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -293,13 +223,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -312,13 +242,13 @@ const Container=()=>{
                 <div class="hover-items">
                     <h3>Project Source</h3>
                     <div class="icons">
-                        <a href="#" class="icon">
+                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="icon">
-                            <i class="fab fa-behance"></i>
+                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="icon">
+                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -328,11 +258,9 @@ const Container=()=>{
     </section>
         `
     )
-}
-
-const MainPage = () => {
-  return /*html*/`(
-    <main>
+};
+const ContainerBlog=()=>{
+    return /*html*/`
     <section class="container" id="blogs">
         <div class="blogs-content">
             <div class="main-title">
@@ -414,6 +342,11 @@ const MainPage = () => {
             </div>
         </div>
     </section>
+    `
+};
+const MainPage = () => {
+  return /*html*/`(
+    <main>
     <section class="container contact" id="contact">
         <div class="contact-container">
             <div class="main-title">
@@ -515,7 +448,7 @@ const MainPage = () => {
     </section>
 </main>
     
-  )`
-}
+  );`
+};
 
-export { MainPage,ContainerAbout,Container }
+export { MainPage,ContainerAbout,Container,ContainerBlog }

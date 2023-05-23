@@ -6,8 +6,8 @@ import NotFound from "./pages/NotFound.js";
 
 const app=document.querySelector("#app");
 
-router.on('/',()=>{render(HomePage,app)})
-router.notFound(()=>{render(NotFound,app)})
+router.on('/',()=>render(HomePage,app))
+router.notFound(()=>render(NotFound,app))
 
 
 router.resolve();

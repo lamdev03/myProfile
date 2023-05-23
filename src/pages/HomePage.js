@@ -1,14 +1,13 @@
 import Header from "../components/header"
-import {MainPage,ContainerAbout, Container} from "./MainPage"
+import {MainPage,ContainerAbout, Container, ContainerBlog} from "./MainPage"
 
-const HomePage=()=>{
-    return (/*html*/`
-        ${Header}
-        ${MainPage}
-        ${ContainerAbout}
-        ${Container}
-        <div class="theme-btn">
-        <i class="fas fa-adjust"></i>  
-    </div>`
-    )}
+const HomePage = () => {
+    return /*html*/`
+        ${Header};
+        ${MainPage};
+        ${ContainerAbout};
+        ${Container};
+        ${ContainerBlog};
+        `
+    }
 export { HomePage} 
