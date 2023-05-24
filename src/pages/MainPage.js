@@ -1,3 +1,4 @@
+import { Admin, Information } from "../data";
 
 
 const ContainerAbout= () => {
@@ -10,98 +11,37 @@ const ContainerAbout= () => {
         <div class="about-container">
             <div class="left-about">
                 <h4>Information About me</h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
-                    vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                    delectus dolore fugiat exercitationem a, 
-                    ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Harum non necessitatibus deleniti eum soluta.
-                </p>
+                ${Information.map(function(infor){
+                    return `
+                        ${infor.Content}
+                        <br /> <br />
+                        ${infor.Content2}
+                    `
+                })}
             </div>
             <div class="right-about">
                 <div class="about-item">
                     <div class="abt-text">
-                        <p class="large-text">650+</p>
-                        <p class="small-text">Projects <br /> Completed</p>
+                        <p class="large-text">MY SKILLS</p>
+                        <p class="small-text"></p>
                     </div>
                 </div>
                 <div class="about-item">
                     <div class="abt-text">
-                        <p class="large-text">10+</p>
-                        <p class="small-text">Years of <br /> experience</p>
+                        <p class="large-text">HTML5</p>
+                        <p class="small-text">Normal</p>
                     </div>
                 </div>
                 <div class="about-item">
                     <div class="abt-text">
-                        <p class="large-text">300+</p>
-                        <p class="small-text">Happy <br /> Clients</p>
+                        <p class="large-text">CSS3</p>
+                        <p class="small-text">Normal</p>
                     </div>
                 </div>
                 <div class="about-item">
                     <div class="abt-text">
-                        <p class="large-text">400+</p>
-                        <p class="small-text">Customer <br /> reviews</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about-stats">
-            <h4 class="stat-title">My Skills</h4>
-            <div class="progress-bars">
-                <div class="progress-bar">
-                    <p class="prog-title">html5</p>
-                    <div class="progress-con">
-                        <p class="prog-text">80%</p>
-                        <div class="progress">
-                            <span class="html"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="prog-title">css3</p>
-                    <div class="progress-con">
-                        <p class="prog-text">95%</p>
-                        <div class="progress">
-                            <span class="css"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="prog-title">javascript</p>
-                    <div class="progress-con">
-                        <p class="prog-text">75%</p>
-                        <div class="progress">
-                            <span class="js"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="prog-title">ReactJS</p>
-                    <div class="progress-con">
-                        <p class="prog-text">75%</p>
-                        <div class="progress">
-                            <span class="react"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="prog-title">NodeJS</p>
-                    <div class="progress-con">
-                        <p class="prog-text">87%</p>
-                        <div class="progress">
-                            <span class="node"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <p class="prog-title">Python</p>
-                    <div class="progress-con">
-                        <p class="prog-text">70%</p>
-                        <div class="progress">
-                            <span class="python"></span>
-                        </div>
+                        <p class="large-text">JAVACRIPT</p>
+                        <p class="small-text">Normal</p>
                     </div>
                 </div>
             </div>
@@ -360,22 +300,24 @@ return /*html*/`
                         In, laborum numquam? Quam excepturi perspiciatis quas quasi.
                     </p>
                     <div class="contact-info">
+                    ${Admin.map(function(ad){
+                        return`
                         <div class="contact-item">
-                            <div class="icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Location</span>
-                            </div>
-                            <p>
-                                : London, united Kingdom
-                            </p>
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location</span>
                         </div>
-                        <div class="contact-item">
+                        <p>
+                            : ${ad.location}
+                        </p>
+                    </div>
+                    <div class="contact-item">
                             <div class="icon">
                                 <i class="fas fa-envelope"></i>
                                 <span>Email</span>
                             </div>
                             <p>
-                                <span>: maclinzuniversal@gmail.com</span>
+                                <span>: ${ad.email}</span>
                             </p>
                         </div>
                         <div class="contact-item">
@@ -384,7 +326,7 @@ return /*html*/`
                                 <span>Education</span>
                             </div>
                             <p>
-                                <span>: Sussex University, East Sussex</span>
+                                <span>: ${ad.education}</span>
                             </p>
                         </div>
                         <div class="contact-item">
@@ -393,7 +335,7 @@ return /*html*/`
                                 <span>Mobile Number</span>
                             </div>
                             <p>
-                                <span>: 07522670617</span>
+                                <span>: ${ad.numberPhone}</span>
                             </p>
                         </div>
                         <div class="contact-item">
@@ -402,22 +344,24 @@ return /*html*/`
                                 <span>Languages</span>
                             </div>
                             <p>
-                                <span>: Afrikaans, English, Spanish</span>
+                                <span>: ${ad.languages}</span>
                             </p>
                         </div>
+                        `
+                    })}
                     </div>
                     <div class="contact-icons">
                         <div class="contact-icon">
-                            <a href="www.facebook.com" target="_blank">
+                            <a href="https://www.facebook.com/LeonNguyen26.3/" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" target="_blank">
-                                <i class="fab fa-twitter"></i>
+                            <a href="https://www.instagram.com/tenla.lam/" target="_blank">
+                                <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://github.com/lamntph28897" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://www.youtube.com/channel/UCyoeL38u4gtCAIU42l0ih7w" target="_blank">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -435,12 +379,7 @@ return /*html*/`
                         <div class="input-control">
                             <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
                         </div>
-                        <div class="submit-btn">
-                            <a href="#" class="main-btn">
-                                <span class="btn-text">Download CV</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                        </div>
+                        <button class="ring ring-green-500 rounded-lg hover:bg-green-500 float-right p-0.5 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900 ..." >SEND</button>
                     </form>
                 </div>
             </div>

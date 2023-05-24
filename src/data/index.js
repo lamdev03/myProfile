@@ -1,6 +1,7 @@
-const products=[
-    {id:1,title:"san pham so 1",cmt:"depvailz"},
-    {id:2,title:"san pham so 2",cmt:"depvailz"},
-    {id:3,title:"san pham so 3",cmt:"depvailz"}
+const Admin=[
+{id:1,name:"Nguyen Tien Lam",location:"Nam Tu Liem",email:"ntl260303@gmail.com",education:"Fpt Polytechnic",numberPhone:"0949520467",languages:"Viet Nam,English"}
 ]
-export  {products}
+const Information=[
+    {Content:"My name is Nguyen Tien Lam, currently studying at Fpt Polytechnic College in Hanoi.I majored in Web Design and am currently in term 5.",Content2:"And this is one of my projects while studying at school."}
+]
+export  {Admin,Information}

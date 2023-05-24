@@ -1,3 +1,4 @@
+import { Admin, Information } from "../data";
 
 const Header =() => {
     return /*html*/`
@@ -11,14 +12,16 @@ const Header =() => {
           </div>
           <div class="right-header">
               <h1 class="name">
-                  Hi, I'm <span>Nguyen Tien Lam</span>
+                  Hi, I'm
+                    ${Admin.map(function(Ad){
+                        return `<span>${Ad.name}</span>`
+                    })}
                   A Web Developer.
               </h1>
-              <p>
-                  I'm a Web Developer, I love to create beautiful and functional websites.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, libero?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque blanditiis sed aut!
-              </p>
+              ${Information.map(function(infor){
+                return `
+                    <p>Welcome to my project.${infor.Content}</p>                `
+            })}
           </div>
       </div>
 </header>
