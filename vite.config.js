@@ -8,7 +8,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: path.resolve(__dirname, "./index.html"),
-                js: path.resolve(__dirname, "src/assets/js/jquery.min.js"),
+                js: path.resolve(__dirname, "src/assets/js/app.js"),
             },
         },
     },
