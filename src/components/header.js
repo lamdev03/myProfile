@@ -7,7 +7,7 @@ const Header =() => {
     <div class="left-header">
               <div class="h-shape"></div>
               <div class="image">
-                  <img src="/src/img/lam.jpg" alt="">
+                  <img src="src/assets/img/lam.jpg" alt="">
               </div>
           </div>
           <div class="right-header">

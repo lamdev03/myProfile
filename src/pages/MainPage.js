@@ -64,7 +64,7 @@ const Container = () => {
         <div class="portfolios">
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port1.jpg" alt="">
+                    <img src="src/assets/img/port1.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -83,7 +83,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port2.jpg" alt="">
+                    <img src="src/assets/img/port2.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -102,7 +102,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port3.jpg" alt="">
+                    <img src="src/assets/img/port3.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -121,7 +121,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port4.jpg" alt="">
+                    <img src="src/assets/img/port4.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -140,7 +140,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port5.jpg" alt="">
+                    <img src="src/assets/img/port5.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -159,7 +159,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port2.jpg" alt="">
+                    <img src="src/assets/img/port2.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -178,7 +178,7 @@ const Container = () => {
             </div>
             <div class="portfolio-item">
                 <div class="image">
-                    <img src="/src/img/port7.jpg" alt="">
+                    <img src="src/assets/img/port7.jpg" alt="">
                 </div>
                 <div class="hover-items">
                     <h3>Project Source</h3>
@@ -211,7 +211,7 @@ const ContainerBlog=()=>{
                 ${blogs.map((blog)=>{
                     return `
                     <div class="blog">
-                        <img src="/src/${blog.img}" alt="">
+                        <img src="src/assets/${blog.img}" alt="">
                         <div class="blog-text">
                             <h4>
                                 ${blog.title}
