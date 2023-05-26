@@ -1,5 +1,6 @@
 import { Admin, Information } from "../data";
 import blogs from "../data/blogs";
+import Project from "../data/project";
 
 
 const ContainerAbout= () => {
@@ -62,139 +63,32 @@ const Container = () => {
             Here is some of my work that I've done in various programming languages.
         </p>
         <div class="portfolios">
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port1.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+            
+                ${Project.map((Project)=>{
+                    return `
+                    <div class="portfolio-item">
+                        <div class="image">
+                            <img src="${Project.img}" alt="">
+                        </div>
+                            <div class="hover-items">
+                                <h3>${Project.name}</h3>
+                                <div class="icons">
+                                    <a href="${Project.github}" class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="${Project.ins}" class="icon">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="${Project.ytb}" class="icon">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
                     </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port2.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port3.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port4.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port5.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port2.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="image">
-                    <img src="src/assets/img/port7.jpg" alt="">
-                </div>
-                <div class="hover-items">
-                    <h3>Project Source</h3>
-                    <div class="icons">
-                        <a href="https://github.com/lamntph28897/myProfile" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/tenla.lam/" class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PolyTuts" class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                    `
+                }).join("")}
+                
+                
         </div>
     </section>
         `
