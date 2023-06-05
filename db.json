@@ -1,0 +1,26 @@
+{
+  "Project":[
+    {"id":0,"img":"src/assets/img/port4.jpg","name":"Project Source1","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":1,"img":"src/assets/img/port5.jpg","name":"Project Source2","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":2,"img":"src/assets/img/port2.jpg","name":"Project Source3","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":3,"img":"src/assets/img/port7.jpg","name":"Project Source4","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":4,"img":"src/assets/img/port1.jpg","name":"Project Source5","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":5,"img":"src/assets/img/port3.jpg","name":"Project Source6","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"},
+    {"id":6,"img":"src/assets/img/port4.jpg","name":"Project Source7","github":"https://github.com/lamntph28897/myProfile","ins":"https://www.instagram.com/tenla.lam/","ytb":"https://www.youtube.com/@PolyTuts"}
+  ],
+  "Admin":[
+    {"id":1,"name":"Nguyen Tien Lam","location":"Nam Tu Liem","email":"ntl260303@gmail.com","education":"Fpt Polytechnic","numberPhone":"0949520467","languages":"Viet Nam,English"}
+  ],
+  "Information":[
+    {"Content":"My name is Nguyen Tien Lam, currently studying at Fpt Polytechnic College in Hanoi.I majored in Web Design and am currently in term 5.","Content2":"And this is one of my projects while studying at school."}
+  ],
+  "blogs":[
+    {"id":0,"img":"img/port6.jpg","title":"How to Create Your Own Website","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"},
+    {"id":1,"img":"img/blog1.jpg","title":"How to Become an Expert in Web Design","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"},
+    {"id":2,"img":"img/blog2.jpg","title":"Become a Web Designer in 10 Days","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"},
+    {"id":3,"img":"img/blog3.jpg","title":"Debbuging made easy with Web Inspector","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"},
+    {"id":4,"img":"img/port1.jpg","title":"Get started with Web Design and UI Design","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"},
+    {"id":5,"img":"img/port3.jpg","title":"This is what you need to know about Web Design","content":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus natus voluptas, eos obcaecati recusandae amet?"}
+  ],
+  "users":[]
+}

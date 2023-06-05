@@ -1,6 +1,19 @@
-import { Admin, Information } from "../data";
+// import { Admin, Information } from "../data";
+import { useEffect, useState } from "../lib";
 
 const Header =() => {
+    const [Admin, setAdmin] = useState([]);
+    const [Information,setInformation]=useState([]);
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/Admin`)
+        .then((Response) => Response.json())
+        .then((data) => setAdmin(data))
+    },[]) 
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/Information`)
+        .then((Response) => Response.json())
+        .then((data) => setInformation(data))
+    },[]) 
     return /*html*/`
     <header class="container header active" id="home">
     <div class="header-content">

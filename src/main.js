@@ -1,5 +1,5 @@
+import { render, router } from "./lib/index.js";
 import HomePage from "./pages/HomePage.js";
-import {render,router} from "./utilities/index.js";
 import NotFound from "./pages/NotFound.js";
 
 

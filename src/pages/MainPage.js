@@ -1,9 +1,17 @@
-import { Admin, Information } from "../data";
-import blogs from "../data/blogs";
-import Project from "../data/project";
+// import { Admin, Information } from "../data";
+// import blogs from "../data/blogs";
+// import Project from "../data/project";
+import { useEffect, useState } from "../lib";
 
 
 const ContainerAbout= () => {
+    const [Information,setInformation]=useState([]);
+    
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/Information`)
+        .then((Response) => Response.json())
+        .then((data) => setInformation(data))
+    },[]) 
     return(
         /*html*/`
         <section class="container about" id="about">
@@ -53,6 +61,13 @@ const ContainerAbout= () => {
     )
 };
 const Container = () => {
+    const [Project, setProjects] = useState([]);
+
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/Project`)
+        .then((Response) => Response.json())
+        .then((data) => setProjects(data))
+    },[])    
     return(
         /*html*/`
         <section class="container" id="portfolio">
@@ -95,6 +110,13 @@ const Container = () => {
     )
 };
 const ContainerBlog=()=>{
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/blogs`)
+        .then((Response) => Response.json())
+        .then((data) => setBlogs(data))
+    },[]) 
     return /*html*/`
     <section class="container" id="blogs">
         <div class="blogs-content">
@@ -124,6 +146,13 @@ const ContainerBlog=()=>{
     `
 };
 const MainPage = () => {
+    const [Admin, setAdmin] = useState([]);
+
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/Admin`)
+        .then((Response) => Response.json())
+        .then((data) => setAdmin(data))
+    },[]) 
 return /*html*/`
     <main>
     <section class="container contact" id="contact">
