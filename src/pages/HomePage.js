@@ -1,13 +1,11 @@
-import Header from "../components/header"
-import {MainPage,ContainerAbout, Container, ContainerBlog} from "./MainPage"
+import {MainPage,ContainerAbout, Container, Home} from "./MainPage"
 
 const HomePage = () => {
     return /*html*/`
-        ${Header()}
+        ${Home()}
         ${MainPage()}
         ${ContainerAbout()}
         ${Container()}
-        ${ContainerBlog()}
         `
     }
 export default HomePage 
