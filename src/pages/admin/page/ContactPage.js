@@ -1,12 +1,12 @@
 import Header from "../../../components/header";
 import { useEffect, useState } from "../../../lib";
 
-const ProjectAdminPage = () => {
-    const [projects, setProjects] = useState([]);
+const ContactPage = () => {
+    const [contacts, setContacts] = useState([]);
     useEffect(()=>{
-        fetch(`${import.meta.env.VITE_API_URI}/project`)
+        fetch(`${import.meta.env.VITE_API_URI}/contact`)
         .then((Response) => Response.json())
-        .then((data) => setProjects(data))
+        .then((data) => setContacts(data))
     },[])
     useEffect(() => {
         const btns = document.querySelectorAll(".btn-remove");
@@ -15,11 +15,11 @@ const ProjectAdminPage = () => {
             btn.addEventListener("click", function () {
                 const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
                 if (!confirm) return;
-                fetch(`${import.meta.env.VITE_API_URI}/project/${id}`,{
+                fetch(`${import.meta.env.VITE_API_URI}/contact/${id}`,{
                     method:"DELETE",
                 })
                 .then(()=>{
-                    setProjects(projects.filter((project) => project.id !== +id))
+                    setContacts(contacts.filter((contact) => contact.id !== +id))
                 })
             });
         }
@@ -45,36 +45,29 @@ const ProjectAdminPage = () => {
     }
     </style>
     ${Header()}
-    <div>ProjectAdminPage</div>
-    <a href="#/admin/project/add">them project</a>
+    <div>ContactPage</div>
+    <a href="#/admin/contact/add">them contact</a>
     <table>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Tên</th>
-                        <th>noi dung</th>
-                        <th>ngay bat dau</th>
-                        <th>ngay ket thuc</th>
-                        <th>ky nang</th>
-                        <th>github  </th>
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>message</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    ${projects
+                    ${contacts
                         .map(
-                            (project) => `
+                            (contact) => `
                             <tr>
-                                <td>${project.id}</td>
-                                <td>${project.name}</td>
-                                <td>${project.description}</td>
-                                <td>${project.start}</td>
-                                <td>${project.end}</td>
-                                <td>${project.skill}</td>
-                                <td>${project.github}</td>
+                                <td>${contact.id}</td>
+                                <td>${contact.name}</td>
+                                <td>${contact.email}</td>
+                                <td>${contact.message}</td>
                                 <td>
-                                <a href="#/admin/project/${project.id}/edit">edit</a>
-                                    <button class="btn btn-remove" data-id="${project.id}">
+                                    <button class="btn btn-remove" data-id="${contact.id}">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </td>
@@ -89,4 +82,4 @@ const ProjectAdminPage = () => {
   )
 }
 
-export default ProjectAdminPage
+export default ContactPage

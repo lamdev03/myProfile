@@ -13,7 +13,7 @@ const Header = () => {
                     <li><a href="#/admin/user">UserAdminPage</a></li>
                     <li><a href="#/admin/project">ProjectAdminPage</a></li>
                     <li><a href="#/admin/profile">MyProfile</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="#/admin/contact">Contact</a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                 </ul>

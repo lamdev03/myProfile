@@ -196,7 +196,6 @@ const MainPage = () => {
             const contact = {
                 name: document.querySelector("#name").value,
                 email: document.querySelector("#email").value,
-                subject: document.querySelector("#subject").value,
                 message: document.querySelector("#message").value
             };
             fetch(`${import.meta.env.VITE_API_URI}/contact`, {
@@ -301,10 +300,7 @@ return /*html*/`
                             <input type="email" required placeholder="YOUR EMAIL" id="email" >
                         </div>
                         <div class="input-control">
-                            <input type="text" required placeholder="ENTER SUBJECT" id="subject">
-                        </div>
-                        <div class="input-control">
-                            <input type="text" cols="15" rows="8" placeholder="Message Here..."id="message"></input>
+                            <textarea type="text" cols="15" rows="8" placeholder="Message Here..."id="message"></textarea>
                         </div>
                         <button class="ring ring-green-500 rounded-lg hover:bg-green-500 float-right p-0.5 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900 ..." >Submit</button>
                     </form>

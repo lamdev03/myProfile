@@ -1,16 +1,23 @@
-import { router, useEffect } from "../../../lib";
+import { router, useEffect, useState } from "../../../lib";
 
+const MyProjectEdit = ({id}) => {
 
-const ProjectAddPage = () => {
-
-
-    useEffect(() => {
-        const formAddProject = document.querySelector("#form-add-project");
-        formAddProject.addEventListener("submit", function (event) {
+    
+        const [projects, setProjects] = useState([]);
+    
+        useEffect(()=>{
+            fetch(`${import.meta.env.VITE_API_URI}/project/${id}`)
+            .then((Response)=>Response.json())
+            .then((data)=>setProjects(data))
+        },[])
+        useEffect(()=>{
+            const formAddProduct = document.querySelector("#form-edit-project");
+        const errorsElement = document.querySelector("#errors");
+        formAddProduct.addEventListener("submit", function (event) {
             // chặn reload trang
             event.preventDefault();
 
-            const project = {
+            const formData = {
                 name: document.querySelector("#name").value,
                 description: document.querySelector("#description").value,
                 start: document.querySelector("#start").value,
@@ -18,20 +25,20 @@ const ProjectAddPage = () => {
                 skill: document.querySelector("#skill").value,
                 github: document.querySelector("#github").value,
             };
-
-            fetch(`${import.meta.env.VITE_API_URI}/project`, {
-                method: "POST",
+            fetch(`${import.meta.env.VITE_API_URI}/project/${id}`, {
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(project),
+                body: JSON.stringify(formData),
             }).then(() => {
                     router.navigate("/admin/project");
             });
         });
-    });
-    return `
-    <style>
+        })
+  return (
+`   
+<style>
     .controls{
         display:none;
     }
@@ -68,38 +75,39 @@ const ProjectAddPage = () => {
     .form-group button:hover {
         background-color: #45a049;
     }
-    </style>
-        <h1>Product Page</h1>
-        <form id="form-add-project">
+</style>    
+    <div>MyProjectEdit</div>
+    <div id="errors"></div>
+    <form id="form-edit-project">
             <div class="form-group">
                 <label for="name">name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" value="${projects.name}" required>
             </div>
             <div class="form-group">
                 <label for="description">Noi dung:</label>
-                <input type="text" id="description" name="description" required>
+                <input type="text" id="description" name="description" value="${projects.description}" required>
             </div>
             <div class="form-group">
                 <label for="start">ngay bat dau:</label>
-                <input type="date" id="start" name="start" required>
+                <input type="date" id="start" name="start" value="${projects.start}" required>
             </div>
             <div class="form-group">
                 <label for="end">ngay ket thuc:</label>
-                <input type="date" id="end" name="end" required>
+                <input type="date" id="end" name="end" value="${projects.end}" required>
             </div>
             <div class="form-group">
                 <label for="skill">ky nang trong du an:</label>
-                <input type="text" id="skill" name="skill" required>
+                <input type="text" id="skill" name="skill" value="${projects.skill}" required>
             </div>
             <div class="form-group">
                 <label for="github">github:</label>
-                <input type="text" id="github" name="github" required>
+                <input type="text" id="github" name="github" value="${projects.github}" required>
             </div>
             <div class="form-group">
                 <button>Submit</button>
             </div>
         </form>
-`;
+`  )
 }
 
-export default ProjectAddPage
+export default MyProjectEdit

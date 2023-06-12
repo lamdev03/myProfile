@@ -1,25 +1,35 @@
 {
   "Project": [
     {
-      "id": 1,
-      "img": "src/assets/img/port5.jpg",
       "name": "Project 1 Fpt Polytechnic",
       "description": "Đây là một trong các dự án mà tôi tham gia khi theo học tại trường Cao Đẳng Fpt Polytechnic",
-      "start": "2023-01-01 ",
+      "start": "2023-01-01",
       "end": "2023-03-26",
       "skill": "HTML,CSS,JAVASCRIPT",
-      "github": "https://github.com/lamntph28897/myProfile"
+      "github": "https://github.com/lamntph28897/myProfile",
+      "img": "src/assets/img/project1.png",
+      "id": 1
+    },
+    {
+      "name": "My Profile",
+      "description": "Đây là dự án khi tôi học môn ECMA",
+      "start": "2023-05-24",
+      "end": "2023-06-12",
+      "skill": "html css javascript",
+      "github": "https://github.com/lamntph28897/myProfile",
+      "img": "src/assets/img/project2.png",
+      "id": 2
     }
   ],
   "Admin": [
     {
-      "id": 1,
       "name": "Nguyen Tien Lam",
       "location": "Nam Tu Liem",
       "email": "ntl260303@gmail.com",
       "education": "Fpt Polytechnic",
       "numberPhone": "0949520467",
-      "languages": "Viet Nam,English"
+      "languages": "Viet Nam,English",
+      "id": 1
     }
   ],
   "skill": [
@@ -44,18 +54,10 @@
   ],
   "Contact": [
     {
-      "name": "lamntph28897",
+      "name": "Nguyễn Tiến Lâm",
       "email": "ntl260303@gmail.com",
-      "subject": "tesst nef em iu",
-      "message": "gui thanh cong",
+      "message": "tôi chỉ muốn nói là lâm đẹp trai kaka",
       "id": 1
-    },
-    {
-      "name": "sd",
-      "email": "ntl260303@gmail.com",
-      "subject": "123123",
-      "message": "12312",
-      "id": 2
     }
   ],
   "users": [
@@ -64,6 +66,12 @@
       "password": "$2a$10$Gxk.46PLQOd7jfYOLTCRgOveW9u7JweyHn4bKv102X9WLIDMV5gw2",
       "name": "Nguyễn Tiến Lâm",
       "id": 1
+    },
+    {
+      "email": "ntlsda260303@gmail.com",
+      "password": "$2a$10$woa0IWZFNVPNhJzyq/Zqw.GhNhn6T91D1XTwaDkPMESnIyExSqhEi",
+      "name": "lamntph28897",
+      "id": 2
     }
   ]
 }

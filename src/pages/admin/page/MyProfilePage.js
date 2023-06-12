@@ -31,7 +31,6 @@ const MyProfilePage = () => {
     </style>
     ${Header()}
     <div>User Admin Page</div>
-    <a href="/signup">them tai khoan</a>
     <table>
                 <thead>
                     <tr>

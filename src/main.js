@@ -1,8 +1,11 @@
 import { render, router } from "./lib/index.js";
 import HomePage from "./pages/HomePage.js";
 import NotFound from "./pages/NotFound.js";
+import ContactPage from "./pages/admin/page/ContactPage.js";
+import MyProfileEdit from "./pages/admin/page/MyProfileEdit.js";
 import MyProfilePage from "./pages/admin/page/MyProfilePage.js";
 import ProjectAddPage from "./pages/admin/page/ProjectAdd.js";
+import MyProjectEdit from "./pages/admin/page/ProjectEdit.js";
 import ProjectAdminPage from "./pages/admin/page/ProjectPage.js";
 import ProductAdminPage from "./pages/admin/page/UserPage.js";
 import signin from "./pages/admin/signin.js";
@@ -21,7 +24,12 @@ router.on("/admin/*", () => {}, {
     before(next) {
         const { user } = JSON.parse(localStorage.getItem("user")) || {};
         if (!user) return (window.location.href = "/");
-        if (user && user.id != "1") return (window.location.href = "/signin");
+        if (user && user.id !== "1") {
+            return window.location.href = "/signin";
+        } else {
+            console.log("Thất bại");
+        }
+        ;
         next();
     },
 });
@@ -29,7 +37,11 @@ router.on("/admin/*", () => {}, {
 router.on('/admin/user',()=>render(ProductAdminPage,app))
 router.on('/admin/project',()=>render(ProjectAdminPage,app))
 router.on('/admin/project/add',()=>render(ProjectAddPage,app))
+router.on("/admin/project/:id/edit", ({ data }) => render(() => MyProjectEdit(data), app));
 router.on('/admin/profile',()=>render(MyProfilePage,app))
+router.on("/admin/profile/:id/edit", ({ data }) => render(() => MyProfileEdit(data), app));
+router.on('/admin/contact',()=>render(ContactPage,app))
+
 
 router.notFound(()=>render(NotFound,app))
 
