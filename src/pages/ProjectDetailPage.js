@@ -21,7 +21,7 @@ const ProjectDetailPage = ({id}) => {
 </style>
 
 <div class="flex justify-center pt-10 text-2xl">ProjectDetailPage</div>
-<div class="float-left pl-5 "><a href=""><i class="fa-solid fa-2xl fa-house absolute pl-5"></i></a></div>
+<div class="float-left pl-5 "><a href="/#"><i class="fa-solid fa-2xl fa-house absolute pl-5"></i></a></div>
 <div class=" grid grid-cols-2 grid-flow-col gap-8 pr-20 pt-20">
     <div style="width:100%" class="image">
         <img src="${project.img}" alt="">
