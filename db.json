@@ -23,10 +23,6 @@
     {
       "menu": "<a href='#/admin/menu'>Admin Menu</a>",
       "id": 6
-    },
-    {
-      "menu": "<a href='#' onclick='localStorage.clear();'>Log Out</a>",
-      "id": 7
     }
   ],
   "Project": [

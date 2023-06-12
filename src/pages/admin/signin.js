@@ -28,7 +28,7 @@ const signin = () => {
                 })
             .then(() => {
                 alert("thanh cong");
-                window.location.href = "#/admin/user";
+                window.location.href = "/#/admin/user";
             });
         });
     });
