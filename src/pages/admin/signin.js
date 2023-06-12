@@ -23,14 +23,22 @@ const signin = () => {
             })
             .then((response) => response.json())
             .then((data) => {
-                    // lưu vào localStorage
-                    localStorage.setItem("user", JSON.stringify(data));
-                })
-            .then(() => {
-                alert("thanh cong");
-                window.location.href = "/#/admin/user";
-                location.reload();
-            });
+                // Lưu vào LocalStorage
+                localStorage.setItem("user", JSON.stringify(data));
+                const userString = localStorage.getItem('user');
+                const user = JSON.parse(userString);
+            
+                if (user.accessToken) {
+                    alert("đăng nhập thành công")
+                    // Nếu có accessToken, tiếp tục thực hiện các hành động khác
+                    window.location.href = "/#/admin/user";
+                    location.reload();
+                } else {
+                    // Nếu không có accessToken, xóa toàn bộ dữ liệu trong LocalStorage
+                    localStorage.clear();
+                    alert("Thất bại");
+                }
+            })
         });
     });
   return (
