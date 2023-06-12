@@ -1,6 +1,8 @@
 import { render, router } from "./lib/index.js";
 import HomePage from "./pages/HomePage.js";
 import NotFound from "./pages/NotFound.js";
+import ProjectDetailPage from "./pages/ProjectDetailPage.js";
+import AdminMenu from "./pages/admin/page/AdminMenu.js";
 import ContactPage from "./pages/admin/page/ContactPage.js";
 import MyProfileEdit from "./pages/admin/page/MyProfileEdit.js";
 import MyProfilePage from "./pages/admin/page/MyProfilePage.js";
@@ -18,23 +20,20 @@ const app=document.querySelector("#app");
 router.on('/',()=>render(HomePage,app))
 router.on('/signup',()=>render(signup,app))
 router.on('/signin',()=>render(signin,app))
+router.on('/projectdetail/:id',({data})=>render(()=>ProjectDetailPage(data),app))
 
 // private router
 router.on("/admin/*", () => {}, {
     before(next) {
         const { user } = JSON.parse(localStorage.getItem("user")) || {};
         if (!user) return (window.location.href = "/");
-        if (user && user.id !== "1") {
-            return window.location.href = "/signin";
-        } else {
-            console.log("Thất bại");
-        }
-        ;
+        if (user && user.id != "1") return (window.location.href = "/signin");
         next();
     },
 });
 //admin
 router.on('/admin/user',()=>render(ProductAdminPage,app))
+router.on('/admin/menu',()=>render(AdminMenu,app))
 router.on('/admin/project',()=>render(ProjectAdminPage,app))
 router.on('/admin/project/add',()=>render(ProjectAddPage,app))
 router.on("/admin/project/:id/edit", ({ data }) => render(() => MyProjectEdit(data), app));

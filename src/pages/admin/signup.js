@@ -1,9 +1,15 @@
 import { useEffect } from "../../lib";
-
+import joi from "joi";
+const schema = joi.object({
+    name: joi.string().required(),
+    email: joi.string() .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+    password: joi.string().min(6).required()
+  });
 const signup = () => {
     console.log("singup")
     useEffect(() => {
         const formSignup = document.querySelector("#form-signup");
+        const errorsElement = document.querySelector("#errors");
         if (!formSignup) return;
         formSignup.addEventListener("submit", function (event) {
             // chặn reload trang
@@ -14,7 +20,12 @@ const signup = () => {
                 email: document.querySelector("#email").value,
                 password: document.querySelector("#password").value,
             };
-
+            const { error } = schema.validate(credential, { abortEarly: false });
+            if (error) {
+                const errors = error.details.map((err) => err.message);
+                errorsElement.innerHTML = errors.map((err) => `<p>${err}</p>`).join("");
+                return;
+            }
             fetch(`${import.meta.env.VITE_API_URI}/signup`, {
                 method: "POST",
                 headers: {
@@ -81,6 +92,7 @@ const signup = () => {
     </style>
     <div class="contai">
     <h2>Đăng Ký</h2>
+    <div id="errors"></div>
     <form id="form-signup">
             <div class="form-group">
                 <label for="name">Họ và tên:</label>

@@ -1,4 +1,34 @@
 {
+  "header": [
+    {
+      "menu": "<a href='/'>Home</a>",
+      "id": 1
+    },
+    {
+      "menu": "<a href='#/admin/user'>UserAdminPage</a>",
+      "id": 2
+    },
+    {
+      "menu": "<a href='#/admin/project'>ProjectAdminPage</a>",
+      "id": 3
+    },
+    {
+      "menu": "<a href='#/admin/profile'>MyProfile</a>",
+      "id": 4
+    },
+    {
+      "menu": "<a href='#/admin/contact'>Contact</a>",
+      "id": 5
+    },
+    {
+      "menu": "<a href='#/admin/menu'>Admin Menu</a>",
+      "id": 6
+    },
+    {
+      "menu": "<a href='#' onclick='localStorage.clear();'>Log Out</a>",
+      "id": 7
+    }
+  ],
   "Project": [
     {
       "name": "Project 1 Fpt Polytechnic",
@@ -19,6 +49,16 @@
       "github": "https://github.com/lamntph28897/myProfile",
       "img": "src/assets/img/project2.png",
       "id": 2
+    },
+    {
+      "name": "Dự án mẫu",
+      "description": "Đây là dự án mẫu,tôi xem video trên youtube và code lại",
+      "start": "2023-05-24",
+      "end": "2023-06-12",
+      "skill": "html css javascript",
+      "github": "https://github.com/lamntph28897/duanmau",
+      "img": "src/assets/img/project3.png",
+      "id": 3
     }
   ],
   "Admin": [
@@ -63,13 +103,13 @@
   "users": [
     {
       "email": "ntl260303@gmail.com",
-      "password": "$2a$10$Gxk.46PLQOd7jfYOLTCRgOveW9u7JweyHn4bKv102X9WLIDMV5gw2",
+      "password": "$2a$10$DpymQHHWr5Nvu/NBqoFy1eIbpMqiM1Kr.s3MU5/pTXUh0WDciLH1K",
       "name": "Nguyễn Tiến Lâm",
       "id": 1
     },
     {
-      "email": "ntlsda260303@gmail.com",
-      "password": "$2a$10$woa0IWZFNVPNhJzyq/Zqw.GhNhn6T91D1XTwaDkPMESnIyExSqhEi",
+      "email": "lamgiaofficial@gmail.com",
+      "password": "$2a$10$n9SMRkmm2iS0xFEbIY7XIOVo71IBWFziLffn1qNZeKHdiBQ5o/96C",
       "name": "lamntph28897",
       "id": 2
     }

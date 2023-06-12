@@ -3,6 +3,7 @@
 // import Project from "../data/project";
 import { router, useEffect, useState } from "../lib";
 const Home =() => {
+    
     const [Admin, setAdmin] = useState([]);
     const [Information,setInformation]=useState([]);
     useEffect(()=>{
@@ -39,6 +40,7 @@ const Home =() => {
           </div>
       </div>
 </header>
+
     `
 }
 const ContainerAbout= () => {
@@ -117,11 +119,13 @@ const Container = () => {
             
                 ${Project.map((Project)=>{
                     return `
+                    
                     <div class="portfolio-item">
                         <div class="image">
                             <img src="${Project.img}" alt="">
                         </div>
-                            <div class="hover-items">
+                        <a href="#/projectdetail/${Project.id}">    
+                        <div class="hover-items">
                                 <h3>${Project.name}</h3>
                                 <span>${Project.description}</span>
                                 <span>Ngày bắt đầu:${Project.start}</span>
@@ -132,7 +136,7 @@ const Container = () => {
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
-                            </div>
+                        </div></a>
                     </div>
                     `
                 }).join("")}

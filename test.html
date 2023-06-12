@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Demo</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (localStorage.getItem("accessToken")) {
+        // Hiển thị nút đăng xuất
+        const logoutButton = document.createElement("button");
+        logoutButton.textContent = "Đăng xuất";
+        logoutButton.addEventListener("click", function() {
+          // Xử lý sự kiện đăng xuất ở đây
+        localStorage.removeItem("accessToken");
+          location.reload(); // Tải lại trang sau khi đăng xuất
+        });
+        document.body.appendChild(logoutButton);
+    } else {
+        // Hiển thị nút đăng nhập
+        const loginButton = document.createElement("button");
+        loginButton.textContent = "Đăng nhập";
+        loginButton.addEventListener("click", function() {
+          // Xử lý sự kiện đăng nhập ở đây
+          localStorage.setItem("accessToken", "abc123"); // Giả sử đã đăng nhập thành công và lưu accessToken vào LocalStorage
+          location.reload(); // Tải lại trang sau khi đăng nhập
+        });
+        document.body.appendChild(loginButton);
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Trang Demo</h1>
+</body>
+</html>

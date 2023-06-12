@@ -1,4 +1,13 @@
+import { useEffect, useState } from "../lib";
+
 const Header = () => {
+    const[menus,SetMenus]=useState([])
+
+    useEffect(()=>{
+        fetch(`${import.meta.env.VITE_API_URI}/header`)
+        .then((Response)=>Response.json())
+        .then((data)=>SetMenus(data))
+    },[])
     return `
     <style>
     header {
@@ -10,15 +19,13 @@ const Header = () => {
         <header>
             <div class="flex justify-between p-4 bg-green-300">
                 <ul class="flex items-center space-x-4">
-                    <li><a href="#/admin/user">UserAdminPage</a></li>
-                    <li><a href="#/admin/project">ProjectAdminPage</a></li>
-                    <li><a href="#/admin/profile">MyProfile</a></li>
-                    <li><a href="#/admin/contact">Contact</a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                ${menus.map((men)=>
+                    `<li>${men.menu}</li>`
+                ).join("")}
                 </ul>
                 <div>2</div>
             </div>
+            
         </header>
     `;
 };
