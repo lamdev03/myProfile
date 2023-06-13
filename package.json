@@ -12,9 +12,10 @@
     "vite": "^4.3.2"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.0",
     "joi": "^17.9.2",
     "navigo": "^8.11.1",
+    "sweetalert2": "^11.7.12",
     "vercel": "^29.3.0"
   }
 }

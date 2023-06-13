@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { useEffect } from "../../lib";
 
 const signin = () => {
@@ -28,16 +29,32 @@ const signin = () => {
                 const userString = localStorage.getItem('user');
                 const user = JSON.parse(userString);
             
-                if (user.accessToken) {
-                    alert("đăng nhập thành công")
-                    // Nếu có accessToken, tiếp tục thực hiện các hành động khác
-                    window.location.href = "/#/admin/user";
-                    location.reload();
-                } else {
-                    // Nếu không có accessToken, xóa toàn bộ dữ liệu trong LocalStorage
-                    localStorage.clear();
-                    alert("Thất bại");
+                async function login() {
+                    if (user.accessToken) {
+                        await Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Đăng nhập thành công',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        // Nếu có accessToken, tiếp tục thực hiện các hành động khác
+                        window.location.href = "/#/admin/user";
+                        location.reload();
+                    } else {
+                        // Nếu không có accessToken, xóa toàn bộ dữ liệu trong LocalStorage
+                        localStorage.clear();
+                        await Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'Thất bại',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
                 }
+                
+                login();
             })
         });
     });

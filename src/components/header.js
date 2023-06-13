@@ -15,7 +15,9 @@ const Header = () => {
         color: var(--color-white);
         overflow: hidden;
         padding: 0 !important;
-    }</style>
+    }
+
+    </style>
         <header>
             <div class="flex justify-between p-4 bg-green-300">
                 <ul class="flex items-center space-x-4">

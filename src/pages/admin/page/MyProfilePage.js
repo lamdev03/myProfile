@@ -55,7 +55,7 @@ const MyProfilePage = () => {
                                 <td>${admin.numberPhone}</td>
                                 <td>${admin.languages}</td>
                                 <td>
-                                <a href="#/admin/profile/${admin.id}/edit">edit</a>
+                                <a href="#/admin/profile/${admin.id}/edit">edit</a> 
                                 </td>
                             </tr>
                     `

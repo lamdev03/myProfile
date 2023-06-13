@@ -12,7 +12,6 @@ const MyProjectEdit = ({id}) => {
         },[])
         useEffect(()=>{
             const formAddProduct = document.querySelector("#form-edit-project");
-        const errorsElement = document.querySelector("#errors");
         formAddProduct.addEventListener("submit", function (event) {
             // chặn reload trang
             event.preventDefault();

@@ -128,8 +128,8 @@ const Container = () => {
                         <div class="hover-items">
                                 <h3>${Project.name}</h3>
                                 <span>${Project.description}</span>
-                                <span>Ngày bắt đầu:${Project.start}</span>
-                                <span>Ngày kết thúc:${Project.end}</span>
+                                <p>Ngày bắt đầu:${Project.start}</p>
+                                <p>Ngày kết thúc:${Project.end}</p>
                                 <span>Các ngôn ngữ của mình dùng trong dự án:${Project.skill}</span>
                                 <div class="icons">
                                     <a href="${Project.github}" class="icon">

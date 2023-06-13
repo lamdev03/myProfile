@@ -51,7 +51,7 @@
       "description": "Đây là dự án mẫu,tôi xem video trên youtube và code lại",
       "start": "2023-05-24",
       "end": "2023-06-12",
-      "skill": "html css javascript",
+      "skill": "html css javascript php",
       "github": "https://github.com/lamntph28897/duanmau",
       "img": "src/assets/img/project3.png",
       "id": 3
@@ -98,16 +98,10 @@
   ],
   "users": [
     {
-      "email": "ntl260303@gmail.com",
-      "password": "$2a$10$DpymQHHWr5Nvu/NBqoFy1eIbpMqiM1Kr.s3MU5/pTXUh0WDciLH1K",
       "name": "Nguyễn Tiến Lâm",
+      "email": "ntl260303@gmail.com",
+      "password": "$2a$10$xfZ5flgM/loMUsyCx5wqpOKqYBeD2JfdSn0X0rUsb8azFDawmdWZe",
       "id": 1
-    },
-    {
-      "email": "lamgiaofficial@gmail.com",
-      "password": "$2a$10$n9SMRkmm2iS0xFEbIY7XIOVo71IBWFziLffn1qNZeKHdiBQ5o/96C",
-      "name": "lamntph28897",
-      "id": 2
     }
   ]
 }
