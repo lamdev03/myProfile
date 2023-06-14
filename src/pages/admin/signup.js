@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import { useEffect } from "../../lib";
 import joi from "joi";
 const schema = joi.object({
@@ -33,8 +34,14 @@ const signup = () => {
                 },
                 body: JSON.stringify(credential),
             }).then(() => {
-                alert("thanh cong");
-                window.location.href = "/signin";
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Đăng ký thành công',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                window.location.href = "/#/signin";
             });
         });
     });

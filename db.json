@@ -23,17 +23,21 @@
     {
       "menu": "<a href='#/admin/menu'>Admin Menu</a>",
       "id": 6
+    },
+    {
+      "menu": "<a href='/#/admin/information'>Infomation</a>",
+      "id": 7
     }
   ],
   "Project": [
     {
-      "name": "Project 1 Fpt Polytechnic",
+      "name": "Project 1 Fpt Polytechnic update",
       "description": "Đây là một trong các dự án mà tôi tham gia khi theo học tại trường Cao Đẳng Fpt Polytechnic",
       "start": "2023-01-01",
       "end": "2023-03-26",
       "skill": "HTML,CSS,JAVASCRIPT",
       "github": "https://github.com/lamntph28897/myProfile",
-      "img": "src/assets/img/project1.png",
+      "img":"src/assets/img/project1.png",
       "id": 1
     },
     {
@@ -85,7 +89,8 @@
   "Information": [
     {
       "Content": "My name is Nguyen Tien Lam, currently studying at Fpt Polytechnic College in Hanoi.I majored in Web Design and am currently in term 5.",
-      "Content2": "And this is one of my projects while studying at school."
+      "Content2": "And this is one of my projects while studying at school.",
+      "id": 1
     }
   ],
   "Contact": [
@@ -98,10 +103,16 @@
   ],
   "users": [
     {
-      "name": "Nguyễn Tiến Lâm",
       "email": "ntl260303@gmail.com",
-      "password": "$2a$10$xfZ5flgM/loMUsyCx5wqpOKqYBeD2JfdSn0X0rUsb8azFDawmdWZe",
+      "password": "$2a$10$0l9qcU4H7AAfrfaha3OoPeEAWFGrLkgzjgDqNUtlvw7mRyCBomvaq",
+      "name": "Nguyễn Tiến Lâm",
       "id": 1
+    },
+    {
+      "email": "ntl26dasd0303@gmail.com",
+      "password": "$2a$10$C9HrF8vDr.FtnGVP1BTRRuHuGa6tZBzR9R/DWZ.8/XKOGS37wo/vC",
+      "name": "sdas",
+      "id": 2
     }
   ]
 }

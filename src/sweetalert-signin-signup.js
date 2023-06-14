@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="control" id="logout" style="width: 98px;right: 60px;position: absolute;top:16px;">
                 <a href="http://localhost:5173">Đăng xuất</a>
             </div>
+            
         `;
         const logoutContainer = document.getElementById("login-container");
         logoutContainer.innerHTML = logoutButtonHTML;

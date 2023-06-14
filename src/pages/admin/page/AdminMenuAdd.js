@@ -67,7 +67,7 @@ const menuAdd = () => {
     <form id="form-add-menu">
             <div class="form-group">
                 <label for="name">name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name"value="<a href=''></a>" required>
             </div>
             <div class="form-group">
                 <button>Submit</button>
